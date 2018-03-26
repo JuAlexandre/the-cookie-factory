@@ -1,5 +1,8 @@
 <?php
     if (!empty($_GET['logout'])) {
+        foreach ($_COOKIE['cart'] as $product => $quantity) {
+            setcookie("cart[$product]", null, -1);
+        }
         unset($_SESSION['loginname']);
         header('Location: login.php');
         exit();
