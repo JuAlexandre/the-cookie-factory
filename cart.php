@@ -15,7 +15,7 @@ if (!isset($_SESSION['loginname'])) {
             </tr>
             <?php foreach ($_COOKIE['cart'] as $product => $quantity):?>
             <tr>
-                <td><img src="assets/img/product-<?= $product ?>.jpg" alt="cookies choclate chips" class="img-responsive" style="height: 200px;"></td>
+                <td><img src="img/product-<?= $product ?>.jpg" alt="cookies choclate chips" class="img-responsive" style="height: 200px;"></td>
                 <td><?= $quantity ?></td>
             </tr>
             <?php endforeach; ?>
